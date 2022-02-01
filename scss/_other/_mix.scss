@@ -1,0 +1,9 @@
+@mixin wrap($width: 1140px, $margin: 0 auto) {
+   width: $width;
+   margin: $margin;
+}
+@mixin font__style($size: 14px, $line: 17px, $color: #5d5d5d) {
+   font-size: $size;
+   line-height: $line;
+   color: $color;
+}

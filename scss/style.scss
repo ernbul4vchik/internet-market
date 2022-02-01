@@ -1,0 +1,42 @@
+/*
+Напоминалка
+mm: margin: 0px 0px 0px 0px;
+pp: padding:0px 0px 0px 0px;
+*/
+
+//Переменные
+@import "_other/_var";
+
+//Миксины
+@import "_other/_mix";
+
+html {
+	height: 100%;
+}
+body {
+	font-family: Lato;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.wrapper {
+	@include wrap(1140px, 0 auto);
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.header__list {
+	list-style: $null__list;
+
+	&-link {
+		text-decoration: $null__link;
+		@include font__style(20px, 17px, darkblue);
+
+		&:hover {
+			@include font__style(16px, 12px, rgb(107, 107, 255));
+		}
+	}
+}
