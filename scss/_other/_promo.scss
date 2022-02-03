@@ -1,0 +1,32 @@
+.promo {
+	background-color: $promo__bg;
+
+	&__container {
+		height: 765px;
+		background-image: url("../img/promo__man.png");
+		background-repeat: no-repeat;
+		background-position: -223px bottom;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		margin-right: -331px;
+	}
+
+	&__header {
+		font-size: 32px;
+		line-height: 38px;
+		border-left: 12px solid $pink;
+		padding: 0px 0px 0px 16px;
+	}
+	&__title {
+		font-weight: 900;
+		@include font__style(48px, 5.8px, #222222);
+	}
+	&__subtitle {
+		@include font__style(32px, 3.8px, #222222);
+	}
+	&__pink {
+		color: $pink;
+	}
+}

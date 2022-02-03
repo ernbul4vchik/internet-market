@@ -10,112 +10,88 @@ m0a: margin: 0px auto;
 
 //Миксины
 @import "_other/_mix";
-* {
-	padding: 0;
-	margin: 0;
-}
-html,
-body {
-	height: 100%;
-}
-body {
-	font-family: Lato;
-}
+// Основные свойства
+@import "_other/gen";
 
-.wrapper {
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
-.header {
-	background-color: $dark__bg;
-}
-.header {
+//Главное меню
+@import "_other/head";
+
+//Промо сайта
+@import "_other/promo";
+
+//Категории
+@import "_other/categories";
+
+@import "_other/product";
+
+//Преимущества
+@import "_other/feauters";
+
+// Отзывы
+
+.feedback {
+	background-image: url("../img/feedback-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 96px 0px 156px 0px;
+
 	&__container {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
 	}
 
-	&__list {
-		list-style-type: $null__list;
-		margin: 20px 0px;
-	}
-}
-.menu {
-	display: flex;
-	align-items: center;
-
-	&__logo {
-		margin-right: 41px;
-	}
-	&__item {
-		&:nth-child(1) {
-			margin-right: 33px;
-		}
-		&:nth-child(2) {
-			margin-right: 33px;
-		}
-		&:nth-child(3) {
-			margin-right: 33px;
-		}
-		&:nth-child(4) {
-			margin-right: 33px;
-		}
-		&:nth-child(5) {
-			margin-right: 33px;
-		}
+	&__women {
+		width: 362px;
+		text-align: center;
 	}
 
-	&__link {
-		text-decoration: $null__link;
+	&__img {
+		margin: 0px 0px 30px 0px;
 	}
 
-	&__svg {
-		fill: #e8e8e8;
+	&__info {
+		font-family: Lato;
+		font-style: italic;
+		font-weight: 400;
 
-		&:hover {
-			fill: $pink;
-		}
+		@include font__style(20px, 24px, #000);
 	}
 }
 
-.promo {
-	background-color: $promo__bg;
-
-	&__container {
-		height: 765px;
-		background-image: url("../img/promo__man.png");
-		background-repeat: no-repeat;
-		background-position: -223px bottom;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-end;
-		margin-right: -331px;
-	}
-
-	&__header {
-		font-size: 32px;
-		line-height: 38px;
-		border-left: 12px solid $pink;
-		padding: 0px 0px 0px 16px;
-	}
+.subscribe {
 	&__title {
-		font-weight: 900;
-		@include font__style(48px, 5.8px, #222222);
+		text-align: center;
+		font-weight: 700;
+		@include font__style(24px, 30px, #222224);
 	}
 	&__subtitle {
-		@include font__style(32px, 3.8px, #222222);
+		@include font__style(18px, 30px, #222224);
+		margin-bottom: 32px;
 	}
-	&__pink {
+
+	&__input {
+		margin-top: 32px;
+		background: #e1e1e1;
+		border: none;
+		outline: none;
+		padding: 18px 22px;
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
 		color: $pink;
 	}
-}
 
-.main {
-	flex: 1 1 auto;
+	&__btn {
+		display: inline-block;
+		background: #f16d7f;
+		padding: 18px 22px;
+		outline: none;
+		border: none;
+		@include font__style(14px, 17px, #fff);
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
+		cursor: pointer;
+	}
 }
 
 .footer {

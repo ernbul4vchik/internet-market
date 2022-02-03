@@ -1,0 +1,56 @@
+.header {
+	background-color: $dark__bg;
+}
+.header {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__list {
+		list-style-type: $null__list;
+		margin: 20px 0px;
+	}
+}
+.menu {
+	display: flex;
+	align-items: center;
+
+	&__logo {
+		margin-right: 41px;
+	}
+	&__item {
+		&:nth-child(1) {
+			margin-right: 33px;
+		}
+		&:nth-child(2) {
+			margin-right: 33px;
+		}
+		&:nth-child(3) {
+			margin-right: 33px;
+		}
+		&:nth-child(4) {
+			margin-right: 33px;
+		}
+		&:nth-child(5) {
+			margin-right: 33px;
+		}
+	}
+
+	&__link {
+		text-decoration: $null__link;
+	}
+
+	&__svg {
+		fill: #e8e8e8;
+		transition-property: fill;
+		transition-duration: 0.5s;
+
+		&:hover {
+			transition-property: fill;
+			transition-duration: 0.5s;
+			fill: $pink;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.feauters {
+	background-color: $dark__bg;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 103px 0px;
+	}
+
+	&__card {
+		width: 360px;
+		height: 133px;
+	}
+
+	&__title {
+		text-align: center;
+		@include font__style(19px, 24px, #fbfbfb);
+		margin-bottom: 16px;
+	}
+
+	&__info {
+		text-align: center;
+		@include font__style(13px, 17px, #fbfbfb);
+	}
+	&__icon {
+		text-decoration: $null__link;
+		color: $pink;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 47px;
+		cursor: default;
+		margin-bottom: 28px;
+	}
+}

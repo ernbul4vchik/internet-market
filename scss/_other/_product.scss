@@ -1,0 +1,99 @@
+.product {
+	margin: 96px 0px 95px 0px;
+
+	&__info {
+		text-align: center;
+	}
+
+	&__title {
+		@include font__style(30px, 36px, #222222);
+		margin-bottom: 6px;
+	}
+
+	&__subtitle {
+		@include font__style(14px, 17px, #9f9f9f);
+		margin-bottom: 47px;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}
+
+.product__next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 48px;
+}
+.product__link {
+	text-decoration: $null__link;
+	@include font__style(16px, 19px, $pink);
+	border: 1px solid $pink;
+	padding: 15px 40px;
+	transition-property: background-color, color;
+	transition-duration: 1s;
+	&:hover {
+		transition-property: background-color, color;
+		transition-duration: 0.5s;
+		background-color: $pink;
+		color: white;
+	}
+}
+
+.card__box {
+	cursor: pointer;
+	position: relative;
+
+	&:hover .product__hover {
+		opacity: 1;
+	}
+	&-info {
+		width: 316px;
+		padding: 18px 20px;
+	}
+
+	&-title {
+		@include font__style(13px, 16px, black);
+		margin-bottom: 12px;
+	}
+
+	&-subtitle {
+		@include font__style(14px, 17px, #5d5d5d);
+		margin-bottom: 18px;
+	}
+
+	&-link {
+		text-decoration: $null__link;
+		@include font__style(16px, 19px, $pink);
+	}
+}
+
+//Всплывающее окно
+
+.product__hover {
+	padding: 180px 0px 108px 80px;
+	width: 360px;
+	height: 420px;
+	position: absolute;
+	background: rgba(58, 56, 56, 0.86);
+	opacity: 0;
+	transition-duration: 0.5s;
+
+	&-link {
+		vertical-align: center;
+		text-decoration: $null__link;
+		@include font__style(45px, 23px, $pink);
+		outline: 1px solid $pink;
+		padding: 6px 70px;
+		transition-duration: 0.5s;
+		transform: scale(1.3);
+
+		&:hover {
+			@include font__style(45px, 23px, #fff);
+			background-color: $pink;
+		}
+	}
+}

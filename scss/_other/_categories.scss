@@ -1,0 +1,100 @@
+.categories {
+	&__container {
+		padding-top: 65px;
+	}
+
+	&__list {
+		list-style-type: $null__list;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}
+.list {
+	&__item {
+		width: 360px;
+		height: 260px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		&:hover .list__hover {
+			cursor: pointer;
+			opacity: 1;
+		}
+
+		&:hover .list__header {
+			display: none;
+		}
+		&:first-child {
+			background-image: url("../img/cat-women.png");
+		}
+		&:nth-child(2) {
+			background-image: url("../img/cat-men.png");
+		}
+		&:nth-child(3) {
+			background-image: url("../img/cat-kids.png");
+		}
+
+		&:last-child {
+			background-image: url("../img/cat-trend.png");
+			width: 100%;
+			height: 180px;
+		}
+	}
+
+	&__header {
+		text-align: center;
+		@include font__style(16px, 19px, #ffffff);
+	}
+
+	&__subtitle {
+		@include font__style(24px, 29px, $pink);
+	}
+}
+
+.list__hover {
+	width: 360px;
+	height: 260px;
+	position: absolute;
+	background: rgba(58, 56, 56, 0.86);
+	text-align: center;
+	padding-top: 120px;
+	opacity: 0;
+	transition-duration: 0.5s;
+}
+
+.trend__hover {
+	width: 100%;
+	height: 180px;
+	padding-top: 80px;
+}
+.trend__link {
+	width: 139px;
+	outline: 1px solid $pink;
+	padding: 15px 80px;
+	text-decoration: none;
+	@include font__style(20px, 12px, $pink);
+	transition-property: border, color;
+	transition-duration: 0.3s;
+	&:hover {
+		outline: 1px solid rgb(129, 53, 53);
+		background-color: rgb(129, 53, 53);
+		@include font__style(20px, 12px, #fff);
+	}
+}
+
+.hover__link {
+	width: 139px;
+	outline: 1px solid $pink;
+	padding: 15px 50px;
+	text-decoration: none;
+	@include font__style(20px, 12px, $pink);
+	transition-property: border, color;
+	transition-duration: 0.3s;
+	&:hover {
+		background-color: $pink;
+		@include font__style(20px, 12px, #fff);
+	}
+}
