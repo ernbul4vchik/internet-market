@@ -29,14 +29,15 @@
 	margin-top: 48px;
 }
 .product__link {
+	display: inline-block;
 	text-decoration: $null__link;
 	@include font__style(16px, 19px, $pink);
 	border: 1px solid $pink;
 	padding: 15px 40px;
-	transition-property: background-color, color;
+	transition-property: all;
 	transition-duration: 1s;
 	&:hover {
-		transition-property: background-color, color;
+		transition-property: all;
 		transition-duration: 0.5s;
 		background-color: $pink;
 		color: white;

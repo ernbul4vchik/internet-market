@@ -28,77 +28,84 @@ m0a: margin: 0px auto;
 @import "_other/feauters";
 
 // Отзывы
+@import "_other/feedback";
 
-.feedback {
-	background-image: url("../img/feedback-bg.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	padding: 96px 0px 156px 0px;
+//Футер
+@import "_other/footer";
 
-	&__container {
-		display: flex;
-		justify-content: space-between;
-	}
+//! Мужской каталог
 
-	&__women {
-		width: 362px;
-		text-align: center;
-	}
+.catalog-promo {
+	background-color: $promo__bg;
+	padding: 60px 0px;
 
-	&__img {
-		margin: 0px 0px 30px 0px;
-	}
-
-	&__info {
-		font-family: Lato;
-		font-style: italic;
-		font-weight: 400;
-
-		@include font__style(20px, 24px, #000);
-	}
-}
-
-.subscribe {
 	&__title {
-		text-align: center;
-		font-weight: 700;
-		@include font__style(24px, 30px, #222224);
-	}
-	&__subtitle {
-		@include font__style(18px, 30px, #222224);
-		margin-bottom: 32px;
+		@include font__style(24px, 29px, $pink);
+		position: relative;
+		animation-name: anim-title;
+		animation-duration: 1.5s;
 	}
 
-	&__input {
-		margin-top: 32px;
-		background: #e1e1e1;
-		border: none;
-		outline: none;
-		padding: 18px 22px;
-		border-top-left-radius: 15px;
-		border-bottom-left-radius: 15px;
+	&__list {
+		list-style-type: $null__list;
+		display: flex;
+		animation-name: anim-caty;
+		animation-duration: 1.5s;
+		position: relative;
+	}
+	&__item {
+		margin-right: 7px;
+
+		&:nth-child(1):after {
+			content: "  /";
+			margin-left: 7px;
+		}
+		&:nth-child(2):after {
+			content: "  /";
+			margin-left: 7px;
+		}
+	}
+
+	&__link {
+		text-decoration: $null__link;
+		@include font__style(14px, 17px, #636363);
+
+		&:hover {
+			color: $pink;
+		}
+	}
+
+	&__active {
 		color: $pink;
-	}
-
-	&__btn {
-		display: inline-block;
-		background: #f16d7f;
-		padding: 18px 22px;
-		outline: none;
-		border: none;
-		@include font__style(14px, 17px, #fff);
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
-		cursor: pointer;
+		font-weight: bold;
 	}
 }
 
-.footer {
-	background-color: $dark__bg;
+.catalog-promo__container {
+	display: flex;
+	justify-content: space-between;
 }
 
 [class*="__container"] {
 	max-width: 1140px;
 	margin: 0px auto;
+}
+
+@keyframes anim-title {
+	0% {
+		right: 500px;
+	}
+
+	100% {
+		right: 0px;
+	}
+}
+@keyframes anim-caty {
+	0% {
+		left: 500px;
+	}
+
+	100% {
+		left: 0px;
+	}
 }

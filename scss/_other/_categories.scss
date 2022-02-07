@@ -60,7 +60,7 @@
 	position: absolute;
 	background: rgba(58, 56, 56, 0.86);
 	text-align: center;
-	padding-top: 120px;
+	padding-top: 105px;
 	opacity: 0;
 	transition-duration: 0.5s;
 }
@@ -68,15 +68,16 @@
 .trend__hover {
 	width: 100%;
 	height: 180px;
-	padding-top: 80px;
+	padding-top: 70px;
 }
 .trend__link {
+	display: inline-block;
 	width: 139px;
 	outline: 1px solid $pink;
-	padding: 15px 80px;
+	padding: 15px 30px;
 	text-decoration: none;
 	@include font__style(20px, 12px, $pink);
-	transition-property: border, color;
+	transition-property: all;
 	transition-duration: 0.3s;
 	&:hover {
 		outline: 1px solid rgb(129, 53, 53);
@@ -86,12 +87,13 @@
 }
 
 .hover__link {
+	display: inline-block;
 	width: 139px;
 	outline: 1px solid $pink;
 	padding: 15px 50px;
 	text-decoration: none;
 	@include font__style(20px, 12px, $pink);
-	transition-property: border, color;
+	transition-property: all;
 	transition-duration: 0.3s;
 	&:hover {
 		background-color: $pink;

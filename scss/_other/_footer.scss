@@ -1,0 +1,47 @@
+.footer {
+	background-color: $dark__bg;
+}
+.footer {
+	&__container {
+		padding: 30px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__copy {
+	}
+
+	&__text {
+		@include font__style(16px, 19px, #fbfbfb);
+	}
+
+	&__social {
+		list-style: $null__list;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		text-decoration: $null__link;
+		background-color: #fff;
+		color: $dark__bg;
+		width: 30px;
+		height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 7px;
+		transition-duration: 0.5s;
+
+		&:hover {
+			background-color: $pink;
+			color: #fff;
+			transition-duration: 0.5s;
+		}
+	}
+}
